@@ -1,4 +1,13 @@
 {
-    "Categories": [],
-    "Products": []
+  "categories": [
+    {
+      "id": 1,
+      "name": "Phones"
+    },
+    {
+      "id": 2,
+      "name": "Computers"
+    }
+  ],
+  "products": []
 }

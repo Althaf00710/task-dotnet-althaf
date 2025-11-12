@@ -1,4 +1,6 @@
-﻿using backend.Services.utils;
+﻿using backend.Services.Mappings;
+using backend.Services.utils;
+using System.Reflection;
 
 namespace backend.Services.DependencyInjection
 {
@@ -8,6 +10,9 @@ namespace backend.Services.DependencyInjection
         {
             // Utility Services
             services.AddSingleton<JsonDataService>();
+
+            // AutoMapper 
+            services.AddAutoMapper(typeof(CategoryMappingProfile).Assembly);
 
             // Entity Services
             services.AddScoped<CategoryService>();

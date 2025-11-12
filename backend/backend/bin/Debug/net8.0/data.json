@@ -1,3 +1,9 @@
 {
-
+  "categories": [
+    {
+      "id": 1,
+      "name": "Phones"
+    }
+  ],
+  "products": []
 }

@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\services\\utils\\jsondataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\services\\utils\\jsondataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\data.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\data.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\services\\dependencyinjection\\serviceinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\services\\dependencyinjection\\serviceinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\models\\datastore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\models\\datastore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\services\\mappings\\categorymappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\services\\mappings\\categorymappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\services\\dependencyinjection\\serviceinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\services\\dependencyinjection\\serviceinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,8 +31,16 @@
       "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\services\\utils\\jsondataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\services\\utils\\jsondataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|solutionrelative:backend\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FD5E8E9-0C21-4ECC-9D62-BE7440B27FCC}|backend\\backend.csproj|c:\\users\\altha\\onedrive\\desktop\\inventory-management\\backend\\backend\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,98 +62,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "data.json",
-              "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\data.json",
-              "RelativeDocumentMoniker": "backend\\data.json",
-              "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\data.json",
-              "RelativeToolTip": "backend\\data.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-12T12:09:18.053Z",
+              "DocumentIndex": 3,
+              "Title": "CategoryMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Services\\Mappings\\CategoryMappingProfile.cs",
+              "RelativeDocumentMoniker": "backend\\Services\\Mappings\\CategoryMappingProfile.cs",
+              "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Services\\Mappings\\CategoryMappingProfile.cs",
+              "RelativeToolTip": "backend\\Services\\Mappings\\CategoryMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T21:26:30.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "DataStore.cs",
-              "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Models\\DataStore.cs",
-              "RelativeDocumentMoniker": "backend\\Models\\DataStore.cs",
-              "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Models\\DataStore.cs",
-              "RelativeToolTip": "backend\\Models\\DataStore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:04:57.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Program.cs",
-              "RelativeDocumentMoniker": "backend\\Program.cs",
-              "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Program.cs",
-              "RelativeToolTip": "backend\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T11:14:34.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "ServiceInjection.cs",
               "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Services\\DependencyInjection\\ServiceInjection.cs",
               "RelativeDocumentMoniker": "backend\\Services\\DependencyInjection\\ServiceInjection.cs",
               "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Services\\DependencyInjection\\ServiceInjection.cs",
               "RelativeToolTip": "backend\\Services\\DependencyInjection\\ServiceInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:52:36.201Z",
+              "WhenOpened": "2025-11-12T21:25:31.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\DTOs\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "backend\\DTOs\\ProductDTO.cs",
+              "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\DTOs\\ProductDTO.cs",
+              "RelativeToolTip": "backend\\DTOs\\ProductDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T17:29:26.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\appsettings.json",
-              "RelativeDocumentMoniker": "backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\appsettings.json",
-              "RelativeToolTip": "backend\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-12T10:48:52.407Z",
+              "Title": "CategoryDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\DTOs\\CategoryDTO.cs",
+              "RelativeDocumentMoniker": "backend\\DTOs\\CategoryDTO.cs",
+              "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\DTOs\\CategoryDTO.cs",
+              "RelativeToolTip": "backend\\DTOs\\CategoryDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T17:29:45.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "JsonDataService.cs",
               "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Services\\utils\\JsonDataService.cs",
               "RelativeDocumentMoniker": "backend\\Services\\utils\\JsonDataService.cs",
               "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Services\\utils\\JsonDataService.cs",
               "RelativeToolTip": "backend\\Services\\utils\\JsonDataService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAawCQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T10:46:27.193Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "backend\\Services\\CategoryService.cs",
               "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Services\\CategoryService.cs",
               "RelativeToolTip": "backend\\Services\\CategoryService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwB0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAQwBkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T10:45:22.556Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "backend\\Services\\ProductService.cs",
@@ -170,33 +153,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Models\\Product.cs",
               "RelativeDocumentMoniker": "backend\\Models\\Product.cs",
               "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Models\\Product.cs",
               "RelativeToolTip": "backend\\Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T20:15:45.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\CategoryController.cs",
               "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "backend\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwEQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T20:16:54.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\ProductController.cs",
@@ -204,17 +187,18 @@
               "RelativeToolTip": "backend\\Controllers\\ProductController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T20:16:38.111Z"
+              "WhenOpened": "2025-11-11T20:16:38.111Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Models\\Category.cs",
               "RelativeDocumentMoniker": "backend\\Models\\Category.cs",
               "ToolTip": "C:\\Users\\Altha\\OneDrive\\Desktop\\inventory-management\\backend\\backend\\Models\\Category.cs",
               "RelativeToolTip": "backend\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T20:16:03.055Z",
               "EditorCaption": ""
