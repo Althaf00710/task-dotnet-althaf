@@ -37,3 +37,4 @@ C:\Users\Altha\OneDrive\Desktop\inventory-management\backend\backend\obj\Debug\n
 C:\Users\Altha\OneDrive\Desktop\inventory-management\backend\backend\obj\Debug\net8.0\backend.sourcelink.json
 C:\Users\Altha\OneDrive\Desktop\inventory-management\backend\backend\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Altha\OneDrive\Desktop\inventory-management\backend\backend\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Altha\OneDrive\Desktop\inventory-management\backend\backend\obj\Debug\net8.0\swae.build.ex.cache

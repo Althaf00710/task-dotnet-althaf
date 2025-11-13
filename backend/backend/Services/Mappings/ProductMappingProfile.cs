@@ -8,6 +8,10 @@ namespace backend.Services.Mappings
     {
         public ProductMappingProfile()
         {
+            // Product > ProductDTO (with Category)
+            CreateMap<Product, ProductDTO>()
+                .ForMember(dest => dest.Category, opt => opt.Ignore()); // category handled in service
+
             // Product <> ProductCreateDTO
             CreateMap<ProductCreateDTO, Product>()
                 .ForMember(dest => dest.Code, opt => opt.Ignore()) // code auto-generated
@@ -15,13 +19,10 @@ namespace backend.Services.Mappings
 
             // Product <> ProductUpdateDTO
             CreateMap<ProductUpdateDTO, Product>()
-                .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
-
-            // Product <> ProductStockDTO
-            CreateMap<ProductStockDTO, Product>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
-                .ForMember(dest => dest.Stock, opt => opt.MapFrom(src => src.Stock))
-                .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
+                .ForMember(dest => dest.Name, opt => opt.Condition(src => src.Name != null))
+                .ForMember(dest => dest.Price, opt => opt.Condition(src => src.Price.HasValue))
+                .ForMember(dest => dest.Stock, opt => opt.Condition(src => src.Stock.HasValue))
+                .ForMember(dest => dest.CategoryId, opt => opt.Condition(src => src.CategoryId.HasValue));
 
             // Product <> ProductStatusDTO
             CreateMap<ProductStatusDTO, Product>()
@@ -31,7 +32,6 @@ namespace backend.Services.Mappings
             // Product > DTO 
             CreateMap<Product, ProductCreateDTO>();
             CreateMap<Product, ProductUpdateDTO>();
-            CreateMap<Product, ProductStockDTO>();
             CreateMap<Product, ProductStatusDTO>();
         }
     }

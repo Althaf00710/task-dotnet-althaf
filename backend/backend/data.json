@@ -9,5 +9,24 @@
       "name": "Computers"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "id": 1,
+      "code": "P001",
+      "name": "iPhone 13 Pro Max",
+      "price": 220000,
+      "stock": 20,
+      "status": true,
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "code": "P002",
+      "name": "Samsung Galaxy S25",
+      "price": 200000,
+      "stock": 100,
+      "status": true,
+      "categoryId": 1
+    }
+  ]
 }
