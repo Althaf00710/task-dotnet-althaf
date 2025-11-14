@@ -19,14 +19,14 @@ namespace backend.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public ActionResult<IEnumerable<Category>> GetAll()
         {
             var categories = _categoryService.GetAll();
             return Ok(categories);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public ActionResult<Category> GetById(int id)
         {
             var category = _categoryService.GetById(id);
             if (category == null)
@@ -36,8 +36,15 @@ namespace backend.Controllers
             return Ok(category);
         }
 
+        [HttpGet("total")]
+        public ActionResult<int> GetTotal()
+        {
+            var total = _categoryService.GetTotalCount();
+            return Ok(total);
+        }
+
         [HttpPost]
-        public IActionResult Create([FromBody] CategoryDTO data)
+        public ActionResult<Category> Create([FromBody] CategoryDTO data)
         {
             try
             {
@@ -56,8 +63,9 @@ namespace backend.Controllers
         {
             try
             {
-                _categoryService.Delete(id);
-                return Ok(new { success = true, message = "Category deleted successfully" });
+                var deleted = _categoryService.Delete(id);
+                if (!deleted) return NotFound(new {message = "Category Not Found"});
+                return NoContent();
             }
             catch (Exception ex)
             {
@@ -67,12 +75,22 @@ namespace backend.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update([FromBody] CategoryUpdateDTO data)
+        public ActionResult<Category> Update(int id, [FromBody] CategoryUpdateDTO data)
         {
+            if (id != data.Id)
+            {
+                _logger.LogWarning("Mismatched category ID in update request");
+                return BadRequest(new { message = "Mismatched category ID" });
+            }
+
+            if (ModelState.IsValid) {
+                _logger.LogWarning("Invalid model state for updating category");
+                return BadRequest(ModelState);
+            }
+
             try
             {
-                _categoryService.Update(data);
-                return Ok(new { success = true, message = "Category updated successfully" });
+                return Ok(_categoryService.Update(data));
             }
             catch (Exception ex)
             {

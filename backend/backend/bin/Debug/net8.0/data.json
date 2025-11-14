@@ -24,7 +24,7 @@
       "code": "P002",
       "name": "Samsung Galaxy S25",
       "price": 200000,
-      "stock": 10,
+      "stock": 100,
       "status": true,
       "categoryId": 1
     }

@@ -22,23 +22,87 @@ namespace backend.Services
 
         // CRUD Operations for Product ==============================
 
-        public IEnumerable<ProductDTO> GetAll()
+        public PagedResult GetProducts(ProductSearchDTO search)
         {
-            // Read JSON Data
             var store = _jsonService.Read();
-            var products = store.Products;
+            var products = store.Products.AsQueryable();
 
-            // Map Product to ProductDTO
-            var productDTOs = _mapper.Map<IEnumerable<ProductDTO>>(products);
-
-            // Assign Category Object
-            foreach (var dto in productDTOs)
+            // Search by name 
+            if (!string.IsNullOrWhiteSpace(search.SearchTerm))
             {
-                var product = products.First(p => p.Id == dto.Id);
-                dto.Category = GetCategoryOrDefault(product.CategoryId);
+                products = products.Where(p =>
+                    p.Name.Contains(search.SearchTerm, StringComparison.OrdinalIgnoreCase) 
+                );
             }
 
-            return productDTOs;
+            // Filter by CategoryId
+            if (search.CategoryId.HasValue)
+            {
+                products = products.Where(p => p.CategoryId == search.CategoryId.Value);
+            }
+
+            // Sorting
+            if (!string.IsNullOrWhiteSpace(search.SortBy))
+            {
+                switch (search.SortBy.ToLower())
+                {
+                    case "price":
+                        products = search.SortByDescending
+                            ? products.OrderByDescending(p => p.Price)
+                            : products.OrderBy(p => p.Price);
+                        break;
+
+                    case "stock":
+                        products = search.SortByDescending
+                            ? products.OrderByDescending(p => p.Stock)
+                            : products.OrderBy(p => p.Stock);
+                        break;
+                }
+            }
+
+            // Count before pagination
+            var totalCount = products.Count();
+
+            // Apply pagination
+            var resultProducts = products
+                .Skip((search.Page - 1) * search.PageSize)
+                .Take(search.PageSize)
+                .ToList();
+
+            // Map to DTO + Load Categories
+            var dtoList = _mapper.Map<List<ProductDTO>>(resultProducts);
+
+            foreach (var dto in dtoList)
+            {
+                var prod = resultProducts.First(p => p.Id == dto.Id);
+                dto.Category = GetCategoryOrDefault(prod.CategoryId);
+            }
+
+            return new PagedResult
+            {
+                Items = dtoList,
+                TotalCount = totalCount,
+                Page = search.Page,
+                PageSize = search.PageSize
+            };
+        }
+
+        public int GetTotalProductsCount()
+        {
+            var store = _jsonService.Read();
+            return store.Products.Count;
+        }
+
+        public int GetActiveProductsCount()
+        {
+            var store = _jsonService.Read();
+            return store.Products.Count(p => p.Status);
+        }
+
+        public int GetLowStockProductsCount()
+        {
+            var store = _jsonService.Read();
+            return store.Products.Count(p => p.Stock < 5); //less than 5
         }
 
         public ProductDTO? GetById (int id)
@@ -158,13 +222,12 @@ namespace backend.Services
                 // Check Exist
                 var existing = ValidateAndGet(id, store);
 
-                store.Products.Remove(existing);
+                var removed = store.Products.RemoveAll(p => p.Id == existing.Id);
 
                 // Save updated data
                 _jsonService.Write(store);
 
-                _logger.LogInformation("Product with ID {Id} deleted successfully", id);
-                return true;
+                return removed > 0;
             }
             catch (Exception ex)
             {
@@ -184,7 +247,7 @@ namespace backend.Services
             if (product == null)
             {
                 _logger.LogWarning("Product with ID {Id} not found in validation", id);
-                throw new Exception("Product not found");
+                throw new KeyNotFoundException("Product not found");
             }
 
             return product;

@@ -18,18 +18,23 @@ namespace backend.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public ActionResult<PagedResult> GetProducts([FromQuery] ProductSearchDTO data)
         {
-            var products = _productService.GetAll();
+            var products = _productService.GetProducts(data);
+
             return Ok(products);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public ActionResult<ProductDTO> GetById(int id)
         {
             try
             {
-                return Ok(_productService.GetById(id));
+                var product = _productService.GetById(id);
+                if (product == null)
+                    return NotFound(new { message = "Product not found" });
+
+                return Ok(product);
             }
             catch (Exception ex)
             {
@@ -38,9 +43,59 @@ namespace backend.Controllers
             }
         }
 
-        [HttpPost]
-        public IActionResult Create([FromBody] ProductCreateDTO data)
+        [HttpGet("total")]
+        public ActionResult<int> GetTotal()
         {
+            try
+            {
+                var total = _productService.GetTotalProductsCount();
+                return Ok(total );
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Failed to get total products");
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpGet("active/total")]
+        public ActionResult<int> GetActiveTotal()
+        {
+            try
+            {
+                var total = _productService.GetActiveProductsCount();
+                return Ok(new { total });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Failed to get active products");
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpGet("low-stock/total")]
+        public ActionResult<int> GetLowStockProductsCount()
+        {
+            try
+            {
+                var total = _productService.GetLowStockProductsCount();
+                return Ok(total);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Failed to get low stock products");
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        public ActionResult<ProductDTO> Create([FromBody] ProductCreateDTO data)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             try
             {
                 var dto = _productService.Add(data);
@@ -58,18 +113,46 @@ namespace backend.Controllers
         {
             try
             {
-                return Ok(new { success = _productService.DeleteProduct(id) });
+                var deleted = _productService.DeleteProduct(id);
+                if (!deleted)
+                    return NotFound(new { message = "Product not found" });
+
+                return NoContent();
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, "Failed to delete product");
-                return BadRequest(new { success = false, message = ex.Message });
+                _logger.LogWarning(ex, "Failed to delete product with ID {ProductId}", id);
+                return BadRequest(new { message = ex.Message });
             }
         }
 
-        [HttpPut]
-        public IActionResult Update([FromBody] ProductUpdateDTO data)
+        [HttpPatch("toggle-status/{id}")]
+        public ActionResult<ProductStatusDTO> ToggleStatus(int id, ProductStatusDTO data)
         {
+            if (data.Id != id)
+                return BadRequest(new { message = "URL id does not match body id." });
+
+            try
+            {
+                var updatedProduct = _productService.UpdateStatus(data);
+                return Ok(updatedProduct);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Failed to toggle status for product with ID {ProductId}", id);
+                return NotFound(new { message = ex.Message });
+            }
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult<ProductDTO> Update(int id, [FromBody] ProductUpdateDTO data)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (data.Id != id)
+                return BadRequest(new { message = "URL id does not match body id." });
+
             try
             {
                 return Ok(_productService.Update(data));

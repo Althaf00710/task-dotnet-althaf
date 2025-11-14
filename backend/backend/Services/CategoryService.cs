@@ -26,53 +26,94 @@ namespace backend.Services
             return store.Categories;
         }
 
+        public int GetTotalCount()
+        {
+            var store = _jsonService.Read();
+            return store.Categories.Count;
+        }
+
         public Category? GetById(int id)
         {
             var store = _jsonService.Read();
-            return store.Categories.FirstOrDefault(c => c.Id == id);
+            var category = store.Categories.FirstOrDefault(c => c.Id == id);
+
+            if (category == null)
+            {
+                _logger.LogWarning("Category with ID {Id} not found", id);
+                throw new Exception("Category not found");
+            }
+
+            return category;
         }
 
         public Category Add(CategoryDTO data)
         {
-            var store = _jsonService.Read();
+            try
+            {
+                var store = _jsonService.Read();
 
-            // Common Validations
-            ValidateCategory(data.Name, store);
+                // Validate name
+                ValidateCategory(data.Name, store);
 
-            // Map and assign new ID
-            var category = _mapper.Map<Category>(data);
-            category.Id = store.Categories.Any() ? store.Categories.Max(c => c.Id) + 1 : 1;
+                // Map and assign ID
+                var category = _mapper.Map<Category>(data);
+                category.Id = store.Categories.Any() ? store.Categories.Max(c => c.Id) + 1 : 1;
 
-            store.Categories.Add(category);
-            _jsonService.Write(store);
-            return category;
+                store.Categories.Add(category);
+                _jsonService.Write(store);
+
+                return category;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error adding category with Name: {Name}", data.Name);
+                throw;
+            }
         }
 
-        public void Update(CategoryUpdateDTO data)
+        public Category Update(CategoryUpdateDTO data)
         {
-            var store = _jsonService.Read();
-            var existing = store.Categories.FirstOrDefault(c => c.Id == data.Id);
-            if (existing == null) throw new KeyNotFoundException("Category not found");
+            try
+            {
+                var store = _jsonService.Read();
+                var existing = GetById(data.Id);
 
-            // Common Validations 
-            ValidateCategory(data.Name, store, data.Id);
+                // Common Validations 
+                ValidateCategory(data.Name, store, data.Id);
 
-            // map updates
-            _mapper.Map(data, existing);    
+                // map updates
+                _mapper.Map(data, existing);
+                _jsonService.Write(store);
 
-            _jsonService.Write(store);
+                return existing;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating category with ID: {Id}", data.Id);
+                throw;
+            }
         }
 
-        public void Delete(int id)
+        public bool Delete(int id)
         {
-            var store = _jsonService.Read();
+            try
+            {
+                var store = _jsonService.Read();
 
-            // Prevent deleting if products are associated
-            if (HasProducts(id, store))
-                throw new InvalidOperationException("Cannot delete category with associated products.");
+                // Prevent deleting if products are associated
+                if (HasProducts(id, store))
+                    throw new InvalidOperationException("Cannot delete category with associated products.");
 
-            store.Categories.RemoveAll(c => c.Id == id);
-            _jsonService.Write(store);
+                var removed = store.Categories.RemoveAll(c => c.Id == id);
+                _jsonService.Write(store);
+
+                return removed > 0;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error deleting category with ID: {Id}", id);
+                throw;
+            }
         }
 
 
