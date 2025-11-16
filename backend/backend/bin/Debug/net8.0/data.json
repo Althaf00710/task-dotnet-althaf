@@ -7,6 +7,10 @@
     {
       "id": 2,
       "name": "Computers"
+    },
+    {
+      "id": 3,
+      "name": "Earphones"
     }
   ],
   "products": [

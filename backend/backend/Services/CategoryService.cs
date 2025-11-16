@@ -26,6 +26,38 @@ namespace backend.Services
             return store.Categories;
         }
 
+        public IEnumerable<CategoryWithCountDTO> GetCategoriesWithProductCount()
+        {
+            try
+            {
+                var store = _jsonService.Read();
+
+                var result = store.Categories
+                    .Select(c =>
+                    {
+                        var activeCount = store.Products.Count(p => p.CategoryId == c.Id && p.Status);
+                        var inactiveCount = store.Products.Count(p => p.CategoryId == c.Id && !p.Status);
+
+                        return new CategoryWithCountDTO
+                        {
+                            Id = c.Id,
+                            Name = c.Name,
+                            ActiveProduct = activeCount,
+                            InactiveProduct = inactiveCount
+                        };
+                    })
+                    .OrderBy(c => c.Name)
+                    .ToList();
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to fetch categories with product counts");
+                throw;
+            }
+        }
+
         public int GetTotalCount()
         {
             var store = _jsonService.Read();

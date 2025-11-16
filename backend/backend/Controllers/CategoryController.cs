@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/categories")]
     [ApiController]
     public class CategoryController: ControllerBase
     {
@@ -41,6 +41,21 @@ namespace backend.Controllers
         {
             var total = _categoryService.GetTotalCount();
             return Ok(total);
+        }
+
+        [HttpGet("with-count")]
+        public ActionResult<IEnumerable<CategoryWithCountDTO>> GetCategoriesWithCount()
+        {
+            try
+            {
+                var data = _categoryService.GetCategoriesWithProductCount();
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Failed to get categories with product count");
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
         [HttpPost]
@@ -83,7 +98,7 @@ namespace backend.Controllers
                 return BadRequest(new { message = "Mismatched category ID" });
             }
 
-            if (ModelState.IsValid) {
+            if (!ModelState.IsValid) {
                 _logger.LogWarning("Invalid model state for updating category");
                 return BadRequest(ModelState);
             }
