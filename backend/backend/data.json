@@ -6,11 +6,19 @@
     },
     {
       "id": 2,
-      "name": "Computers"
+      "name": "Laptops"
     },
     {
       "id": 3,
+      "name": "Tablets"
+    },
+    {
+      "id": 4,
       "name": "Earphones"
+    },
+    {
+      "id": 5,
+      "name": "Smartwatches"
     }
   ],
   "products": [
@@ -19,7 +27,7 @@
       "code": "P001",
       "name": "iPhone 13 Pro Max",
       "price": 220000,
-      "stock": 20,
+      "stock": 25,
       "status": true,
       "categoryId": 1
     },
@@ -27,10 +35,208 @@
       "id": 2,
       "code": "P002",
       "name": "Samsung Galaxy S25",
-      "price": 200000,
-      "stock": 100,
+      "price": 325000,
+      "stock": 5,
       "status": true,
       "categoryId": 1
+    },
+    {
+      "id": 3,
+      "code": "P003",
+      "name": "Google Pixel 8",
+      "price": 180000,
+      "stock": 10,
+      "status": false,
+      "categoryId": 1
+    },
+    {
+      "id": 5,
+      "code": "P005",
+      "name": "Xiaomi Mi 14",
+      "price": 150000,
+      "stock": 3,
+      "status": true,
+      "categoryId": 1
+    },
+    {
+      "id": 6,
+      "code": "P006",
+      "name": "MacBook Pro 16\u0022",
+      "price": 650000,
+      "stock": 5,
+      "status": true,
+      "categoryId": 2
+    },
+    {
+      "id": 7,
+      "code": "P007",
+      "name": "Dell XPS 15",
+      "price": 450000,
+      "stock": 6,
+      "status": true,
+      "categoryId": 2
+    },
+    {
+      "id": 8,
+      "code": "P008",
+      "name": "HP Spectre x360",
+      "price": 400000,
+      "stock": 3,
+      "status": false,
+      "categoryId": 2
+    },
+    {
+      "id": 9,
+      "code": "P009",
+      "name": "Lenovo ThinkPad X1",
+      "price": 420000,
+      "stock": 7,
+      "status": true,
+      "categoryId": 2
+    },
+    {
+      "id": 10,
+      "code": "P010",
+      "name": "Asus ROG Zephyrus",
+      "price": 500000,
+      "stock": 2,
+      "status": true,
+      "categoryId": 2
+    },
+    {
+      "id": 11,
+      "code": "P011",
+      "name": "iPad Pro 12.9\u0022",
+      "price": 230000,
+      "stock": 10,
+      "status": true,
+      "categoryId": 3
+    },
+    {
+      "id": 12,
+      "code": "P012",
+      "name": "Samsung Galaxy Tab S9",
+      "price": 195000,
+      "stock": 6,
+      "status": true,
+      "categoryId": 3
+    },
+    {
+      "id": 13,
+      "code": "P013",
+      "name": "Lenovo Tab P12",
+      "price": 120000,
+      "stock": 9,
+      "status": true,
+      "categoryId": 3
+    },
+    {
+      "id": 14,
+      "code": "P014",
+      "name": "Huawei MatePad Pro",
+      "price": 140000,
+      "stock": 8,
+      "status": false,
+      "categoryId": 3
+    },
+    {
+      "id": 15,
+      "code": "P015",
+      "name": "Microsoft Surface Pro 9",
+      "price": 250000,
+      "stock": 4,
+      "status": true,
+      "categoryId": 3
+    },
+    {
+      "id": 16,
+      "code": "P016",
+      "name": "Sony WH-1000XM5",
+      "price": 75000,
+      "stock": 12,
+      "status": true,
+      "categoryId": 4
+    },
+    {
+      "id": 17,
+      "code": "P017",
+      "name": "Bose QuietComfort 45",
+      "price": 70000,
+      "stock": 7,
+      "status": true,
+      "categoryId": 4
+    },
+    {
+      "id": 18,
+      "code": "P018",
+      "name": "Apple AirPods Max",
+      "price": 90000,
+      "stock": 5,
+      "status": false,
+      "categoryId": 4
+    },
+    {
+      "id": 19,
+      "code": "P019",
+      "name": "JBL Live 660NC",
+      "price": 45000,
+      "stock": 15,
+      "status": true,
+      "categoryId": 4
+    },
+    {
+      "id": 20,
+      "code": "P020",
+      "name": "Sennheiser Momentum 4",
+      "price": 80000,
+      "stock": 6,
+      "status": true,
+      "categoryId": 4
+    },
+    {
+      "id": 21,
+      "code": "P021",
+      "name": "Apple Watch Series 9",
+      "price": 95000,
+      "stock": 10,
+      "status": true,
+      "categoryId": 5
+    },
+    {
+      "id": 22,
+      "code": "P022",
+      "name": "Samsung Galaxy Watch 6",
+      "price": 85000,
+      "stock": 8,
+      "status": true,
+      "categoryId": 5
+    },
+    {
+      "id": 23,
+      "code": "P023",
+      "name": "Garmin Fenix 7",
+      "price": 125000,
+      "stock": 4,
+      "status": true,
+      "categoryId": 5
+    },
+    {
+      "id": 24,
+      "code": "P024",
+      "name": "Fitbit Sense 2",
+      "price": 60000,
+      "stock": 12,
+      "status": true,
+      "categoryId": 5
+    },
+    {
+      "id": 25,
+      "code": "P025",
+      "name": "Huawei Watch GT 4",
+      "price": 70000,
+      "stock": 7,
+      "status": false,
+      "categoryId": 5
     }
   ]
 }

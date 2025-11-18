@@ -108,7 +108,9 @@ namespace backend.Services
             try
             {
                 var store = _jsonService.Read();
-                var existing = GetById(data.Id);
+                var existing = store.Categories.FirstOrDefault(c => c.Id == data.Id);
+                if (existing == null)
+                    throw new Exception("Category not found");
 
                 // Common Validations 
                 ValidateCategory(data.Name, store, data.Id);

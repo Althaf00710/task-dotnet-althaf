@@ -33,12 +33,14 @@ namespace backend.Services
                 products = products.Where(p =>
                     p.Name.Contains(search.SearchTerm, StringComparison.OrdinalIgnoreCase) 
                 );
+                _logger.LogTrace("SearchTerm is applied");
             }
 
             // Filter by CategoryId
             if (search.CategoryId.HasValue)
             {
                 products = products.Where(p => p.CategoryId == search.CategoryId.Value);
+                _logger.LogTrace("Category filter applied");
             }
 
             // Sorting
