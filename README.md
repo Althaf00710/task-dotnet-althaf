@@ -23,9 +23,8 @@ This system allows managing Categories, Products, Sorting, Searching, and CRUD O
 
 -Setup Instructions
 1. Clone the Project
-2. Install Dependencies for Backend (dotnet restore)
-3. Install Dependencies for Frontend (npm install)
-4. Run both
+2. Install Dependencies for Frontend (npm install)
+3. Run both
 
 -Screenshots of final UI
 Placed in frontend public folder
